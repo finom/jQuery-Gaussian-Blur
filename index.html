@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="jquery.gaussian-blur.js"></script>
+	<script type="text/javascript">
+		jQuery(window).load(function(){ //we're using load because if we'll use ready then we can't get the image size
+			$('.blurImageContainer .blurImage').css({opacity: 0});
+			$('.blurImageContainer').gaussianBlur({
+				deviation: 3, //level of blur
+				imageClass: 'blurImage'	//class of the original image (just in case)	
+			});
+			
+			$('.blurImageContainer').hover(function(){
+				$('.blurImage', this).animate({opacity: 1}, 500);
+			},function(){
+				$('.blurImage', this).animate({opacity: 0}, 500);
+			});
+			
+		});
+	</script>
+	<style>
+	
+	/* Required styles */
+	.blurImageContainer {display: inline-block; position: relative; overflow:hidden;}
+	.blurImageContainer > .blurImage {position: absolute; top:0; left:0; z-index:1;}
+	.blurImageContainer > [id^="blurred"] {position: absolute; top:0; left:0; z-index:0;}
+	/* /Required styles */
+	
+	
+	
+	div#root{max-width:1000px; margin:0 auto; text-align:center;}
+	</style>
+</head>
+<body>
+
+	<div id="root">
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh6.googleusercontent.com/-QojF49Z_quw/TeiKe4FqWAI/AAAAAAAAF3g/CZghkir946U/s144-p/032.JPG">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh4.googleusercontent.com/-ANsyGaIeG-s/Te0-6y7rBQI/AAAAAAAAT34/ynItL0EwGSA/s144-p/3a.jpg">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh5.googleusercontent.com/-nm4iT1VMhzY/Te-IeXfksxI/AAAAAAAAneE/hmO1PNG5Qpc/s144-p/949.jpg">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh3.googleusercontent.com/-qg7nGrDlxwo/TfOrYpblTQI/AAAAAAAAIqI/08LO5QECSDk/s144-p/last%252520minute%252520of%252520evening.jpg">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh6.googleusercontent.com/-BU1WOd-nRzo/TfKAZ_NQoQI/AAAAAAAAAOA/unxyth4v3gg/s144-p/Am%252520Grat%252520u%2525CC%252588ber%252520den%252520Wolken%252520mit%252520Tiefblick%252520in%252520die%252520Kangshungwand.JPG">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh5.googleusercontent.com/-Muck0FuwlPU/TfZnlh5odXI/AAAAAAAAO08/rbRSb5kUc8M/s144-p/_9101893.jpg">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh4.googleusercontent.com/-tXteqqp1dTQ/TfUHyJlGSrI/AAAAAAAAE6s/o8HbpGVgZN8/s144-p/nowz%252520bud.jpg">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh5.googleusercontent.com/-g0e6oGgxQ_8/TepMMoFwlQI/AAAAAAAAH7g/FA_-WCvA_S8/s144-p/DSC04941.jpg">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh5.googleusercontent.com/-eg7JWIscpr0/TfJ4Ky9vT_I/AAAAAAAAEMQ/kaCZZdWUbS0/s144-p/IMG_7563.JPG">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh5.googleusercontent.com/-70f6TWlXtAE/TegQEPJITGI/AAAAAAAAQ9c/iGzXNMMhrzM/s144-p/DSC_0050.JPG">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh6.googleusercontent.com/-CYBEGRIORNw/Tefu_zKXsNI/AAAAAAAAF2w/k4Xg3xWyYnM/s144-p/vill%2525C3%2525A1mok%252520012.jpg">
+		</span>
+		<span class="blurImageContainer">
+			<img class="blurImage" src="https://lh6.googleusercontent.com/-FTgL_FAPcTY/TffhhmVU5MI/AAAAAAAALPQ/8KouBm4Ndk0/s144-p/DSC_1255.JPG">
+		</span>
+	</div>
+
+	
+</body>
+</html>
