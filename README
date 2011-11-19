@@ -1,10 +1,10 @@
 This is the plugin which adds Gaussian Blur effect for images. This plugin uses the SVG and filter property for Internet Explorer 8-. Plugin doesn't work in Safari because it doesn't support feGaussianBlur element. You can use canvas element to support it but here is no canvas. 
 
+Here is one remark: each image should be in some container (e.g. span)
+
 Using
 $('.blurImageContainer').gaussianBlur({
 	deviation: 3, //level of blur
-	imageClass: 'blurImage'	//class for original image (just in case)
-
 });
 
 You should to add that styles:
